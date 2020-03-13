@@ -26,6 +26,9 @@ def comienzo():
     
     tdin=m.get()
     din_dis=float(tdin)
+    hacer_apuesta=Toplevel()
+    hacer_apuesta.title("Apuesta")
+    hacer_apuesta.withdraw()
 
     a=1
     color[0]="verde"
@@ -55,8 +58,6 @@ def verificar():
     if(a<=0 and a>din_dis and a<minimo):
         apostado.set("no puedes apostar esa cantidad \n Prueba de nuevo")
     else:
-        hacer_apuesta=Toplevel()
-        hacer_apuesta.title("Apuesta")
         porapostar.set("Usted est apostando: " + str(a))
         BRet=Button(ventana,text="salir",command=fin,state=DISABLED)
         BRet.grid(row=10,column=2)
@@ -64,6 +65,8 @@ def verificar():
         Ball.config(state=DISABLED)
         Brev.config(state=DISABLED)
         Dpa.config(state=DISABLED)
+
+        hacer_apuesta.deiconify()
         
 def todo():
     pass
