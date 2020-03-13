@@ -61,7 +61,7 @@ def comienzo():
         color[2*a]="negro"
         color[(2*a)-1]="rojo"
         a=a+1
-    color[38]="verde"
+    color[37]="verde"
 
     if(din_dis<minimo):
         error.set("necesitas mas dinero")
