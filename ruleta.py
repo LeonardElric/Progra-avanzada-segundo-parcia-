@@ -20,7 +20,7 @@ def apuesta_echa():
     hacer_apuesta.withdraw()
     
 def comienzo():
-    global hacer_apuesta,minimo,din_dis,color
+    global hacer_apuesta,minimo,din_dis,color, au
     
 #    hacer_apuesta.withdraw()
     
@@ -61,7 +61,7 @@ def comienzo():
         color[2*a]="negro"
         color[(2*a)-1]="rojo"
         a=a+1
-    color[37]="verde"
+    color[38]="verde"
 
     if(din_dis<minimo):
         error.set("necesitas mas dinero")
@@ -110,29 +110,136 @@ def todo():
     hacer_apuesta.deiconify()
 
 def rojos():
-    pass
-
+    global x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,cont
+    x1=1
+    x2=3
+    x3=5
+    x4=7
+    x5=9
+    x6=11
+    x7=13
+    x8=15
+    x9=17
+    x10=19
+    x11=21
+    x12=23
+    x13=25
+    x14=27
+    x15=29
+    x16=31
+    x17=33
+    x18=35
+    cont=1
+    comparag()
 def negros():
-    pass
-
+    global x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,cont
+    x1=2
+    x2=4
+    x3=6
+    x4=8
+    x5=10
+    x6=12
+    x7=14
+    x8=16
+    x9=18
+    x10=20
+    x11=22
+    x12=24
+    x13=26
+    x14=28
+    x15=30
+    x16=32
+    x17=34
+    x18=36
+    cont=2
+    comparag()
 def pares():
-    pass
-    
+    global x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,cont
+    x1=2
+    x2=4
+    x3=6
+    x4=8
+    x5=10
+    x6=12
+    x7=14
+    x8=16
+    x9=18
+    x10=20
+    x11=22
+    x12=24
+    x13=26
+    x14=28
+    x15=30
+    x16=32
+    x17=34
+    x18=36
+    cont=2
+    comparag()
 def impares():
-    pass
-
+    global x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,cont
+    x1=1
+    x2=3
+    x3=5
+    x4=7
+    x5=9
+    x6=11
+    x7=13
+    x8=15
+    x9=17
+    x10=19
+    x11=21
+    x12=23
+    x13=25
+    x14=27
+    x15=29
+    x16=31
+    x17=33
+    x18=35
+    cont=1
+    comparacion()
 def pasa():
-    pass
+    global cont
+    cont=3
+    comparacion()
               
 def fin():
     pass
-
+    
 def falta():
-    pass
+    global cont
+    cont=4
+    comparacion()
 
 def numero():
-    pass
-              
+    global cont
+    cont=5
+    comparacion()
+    
+def comparacion():
+    global x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,cont, au
+    skeler=randint(1,37)
+    if(skeler!=37):
+        if(cont==1):
+            if(skeler=x1 or skeler=x2 or skeler=x3 or skeler=x4 or skeler=x5 or skeler=x6 or skeler=x7 or skeler=x8 or skeler=x9 or skeler=x10 or skeler=x11 or skeler=x12 or skeler=x13 or skeler=x14 or skeler=x15 or skeler=x16 or skeler=x17 or skeler=x18)
+                #poner lo del apostador
+        if(cont==2):
+            if(skeler=x1 or skeler=x2 or skeler=x3 or skeler=x4 or skeler=x5 or skeler=x6 or skeler=x7 or skeler=x8 or skeler=x9 or skeler=x10 or skeler=x11 or skeler=x12 or skeler=x13 or skeler=x14 or skeler=x15 or skeler=x16 or skeler=x17 or skeler=x18)
+                #lo del ganador
+            else:
+        if(cont==3):
+            if(skeler>18):
+                #poner lo del apostador
+            else:
+        if(cont==4):
+            if(skeler<19):
+                #poner lo del apostador
+             else:
+        if(cont==5):
+            if(skeler==au):
+                #poner lo del apostador
+            else:
+    else:
+        #aqui se pone para si cae 00
 ventana=Tk()
 
 m=StringVar()
